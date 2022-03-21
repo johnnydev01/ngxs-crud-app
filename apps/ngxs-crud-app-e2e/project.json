@@ -1,0 +1,28 @@
+{
+  "root": "apps/ngxs-crud-app-e2e",
+  "sourceRoot": "apps/ngxs-crud-app-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ngxs-crud-app-e2e/cypress.json",
+        "devServerTarget": "ngxs-crud-app:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "ngxs-crud-app:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/ngxs-crud-app-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ngxs-crud-app"]
+}

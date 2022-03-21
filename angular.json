@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "ngxs-crud-app": "apps/ngxs-crud-app",
+    "ngxs-crud-app-e2e": "apps/ngxs-crud-app-e2e"
+  }
+}
